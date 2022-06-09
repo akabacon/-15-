@@ -7,7 +7,9 @@ class circle {
      double radius;
 
    public:
-      circle():radius(0){};  ///circle;
+      circle():radius(0){
+      };  ///circle;
+      
       circle(double tradius):radius(tradius){};//circle 
       circle(circle &re){
           radius=re.radius; //this
@@ -15,7 +17,7 @@ class circle {
       ~circle(){
         cout<<"dispose circle cconstructor"<<endl;
         delete &radius;
-        cout<<radius;
+        //cout<<radius;//cannot be printed
       }
       double getRadius(){return radius;};
       void setLength(double tradius){
