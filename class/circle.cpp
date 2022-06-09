@@ -14,7 +14,8 @@ class circle {
       }
       ~circle(){
         cout<<"dispose circle cconstructor"<<endl;
-        delete radius;
+        delete &radius;
+        cout<<radius;
       }
       double getRadius(){return radius;};
       void setLength(double tradius){
@@ -32,9 +33,7 @@ class sphere: protected circle{
       sphere():circle(){};//sphere s1;
       sphere(double tr):circle(tr){}
       sphere(sphere &s):circle(s.radius){}
-      ~sphere(){
-        cout<<"dispose sphere constructor"<<endl;
-      }
+
       double Perimeter(double tr){
         return 2*PI*tr;
       }
