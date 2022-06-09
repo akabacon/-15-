@@ -14,7 +14,7 @@ class circle {
       }
       ~circle(){
         cout<<"dispose circle cconstructor"<<endl;
-        //delete radius;
+        delete radius;
       }
       double getRadius(){return radius;};
       void setLength(double tradius){
