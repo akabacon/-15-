@@ -1,9 +1,11 @@
-#ifdef poly_h
+#ifndef poly_h
 #define poly_h
 
 class poly_num{
   public:
-    poly_num operator +(const poly_num)
+    poly_num operator +(const poly_num) const{
+      
+    }
 
 
 
